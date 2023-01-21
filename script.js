@@ -16,11 +16,11 @@ $(document).ready(function() {
     {
       column: 'nonlearner',
       name: 'Non-Learners',
-      color: 'grey'
+      color: '#373'
     },
     {
-      column: 'learner',
-      name: 'Learners',
+      column: 'learner type',
+      name: 'Learners Type',
       color: 'blue'
     }
   ];
@@ -73,7 +73,7 @@ $(document).ready(function() {
         title: {
           display: true,
           text: TITLE,
-          fontSize: 14,
+          fontSize: 16,
         },
         legend: {
           display: SHOW_LEGEND,
@@ -118,7 +118,7 @@ $(document).ready(function() {
           callbacks: {
             label: function(tooltipItem, all) {
               return all.datasets[tooltipItem.datasetIndex].label
-                + ': ' + tooltipItem.yLabel.toLocaleString();
+                + ': ' + tooltipItem.xLabel.toLocaleString();
             }
           }
         }
